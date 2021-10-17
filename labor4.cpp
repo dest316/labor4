@@ -3,27 +3,6 @@
 
 using namespace std;
 
-template <typename T>
-class sp
-{
-private:
-    T* ptr;
-public:
-    sp(T *ptr)
-    {
-        this->ptr = ptr;
-    }
-    ~sp()
-    {
-        delete ptr;
-    }
-    T& operator*()
-    {
-        return *ptr;
-    }
-};
-
-
 class MyVector
 {
 private:
