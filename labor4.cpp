@@ -108,12 +108,18 @@ public:
 int main()
 {
     setlocale(LC_ALL, "ru");
-    Matrix a(2, 2);
+    cout << "Введите размеры матрицы: " << endl;
+    int rw, clmn;
+    cin >> rw >> clmn;
+    if (rw < 1) { rw = 1; }
+    if (clmn < 1) { clmn = 1; }
+    Matrix a(rw, clmn);
+    cout << "Матрица до сортировки: " << endl;
     a.print();
     cout << endl;
+    cout << "Матрица после сортировки: \n";
     a.sort();
     a.print();
-    return 0;
-    
+    return 0;    
 }
 
